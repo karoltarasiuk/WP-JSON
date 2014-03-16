@@ -21,7 +21,7 @@ Contains full application, all the files needed to run WP-JSON theme based appli
 #Installation instructions
 
 1. Navigate to this location *application_root/wordpress* and install WordPress CMS
-2. 
+2. In WordPress -> Appearance -> Themes activate WP-JSON theme
 
 #Use instructions
 #Use cases
