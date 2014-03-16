@@ -19,5 +19,9 @@ Contains every library in the version I used, in a compressed format, usually in
 Contains full application, all the files needed to run WP-JSON theme based application, with use cases.
 
 #Installation instructions
+
+1. Navigate to this location *application_root/wordpress* and install WordPress CMS
+2. 
+
 #Use instructions
 #Use cases
