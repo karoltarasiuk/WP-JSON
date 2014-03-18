@@ -10,6 +10,12 @@ I hope that with this theme you will be proud, that your website is **_powered b
 
 #Repository contents
 
+## Branches
+
+1. master - always stable branch
+2. staging - development branch
+3. all other branches are features or components branches, they don't work standalone
+
 ## *libs* folder
 
 Contains every library in the version I used, in a compressed format, usually in *zip* or *gz*.
