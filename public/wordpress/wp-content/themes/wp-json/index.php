@@ -2,4 +2,18 @@
 /**
  * The main template file
  */
-die("IT WORKS!");
+
+define( 'SLUG',
+	removeTrailingSlash(
+		removeBeginningSlash(
+			str_replace(
+				dirname($_SERVER["SCRIPT_NAME"]), '', $_SERVER["REQUEST_URI"]
+			)
+		)
+	)
+);
+
+echo('<pre>');
+var_dump(SLUG);
+echo('</pre>');
+die();
