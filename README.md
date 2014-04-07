@@ -32,6 +32,25 @@ Contains full application, all the files needed to run WP-JSON theme based appli
 
 1. Navigate to this location *application_root/wordpress* and install WordPress CMS
 2. In WordPress -> Appearance -> Themes activate WP-JSON theme
+3. Make a call to *application_root/wordpress/posts* to check if it's working. It should return you an array with one default post.
 
 #Use instructions
+
+All available methods are derived directly from WP codex. If you make a call to *posts* method, you can include GET params from the list of available arguments for *get_posts* WP function (), and so on. Check **_Use cases_** section for all possible methods.
+
 #Use cases
+
+1. Posts method
+ - call: *application_root/wordpress/posts* or *application_root/wordpress?function=get_posts*
+ - docs: *https://codex.wordpress.org/Template_Tags/get_posts*
+ - call with params: application_root/wordpress/posts?posts_per_page=10&offset=30
+
+2. Categories method
+ - call: *application_root/wordpress/categories* or *application_root/wordpress?function=get_categories*
+ - docs: *http://codex.wordpress.org/Function_Reference/get_categories*
+ - call with params: application_root/wordpress/categories?exclude=13,59
+
+3. Pages method
+ - call: *application_root/wordpress/pages* or *application_root/wordpress?function=get_pages*
+ - docs: *https://codex.wordpress.org/Function_Reference/get_pages*
+ - call with params: application_root/wordpress/pages?parent=0
