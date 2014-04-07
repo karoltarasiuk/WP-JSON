@@ -8,13 +8,17 @@ In **WP-JSON** case I focused only on one functionality. Its job is serving the 
 
 I hope that with this theme you will be proud, that your website is **_powered by WordPress_**.
 
+#Requirements
+
+1. PHP 5.3.0 - late static bindings (*http://www.php.net/manual/en/language.oop5.late-static-bindings.php*)
+
 #Repository contents
 
 ## Branches
 
 1. master - always stable branch
 2. staging - development branch
-3. all other branches are features or components branches, they don't work standalone
+3. all other branches are features or components branches, they don't work as standalone
 
 ## *libs* folder
 
