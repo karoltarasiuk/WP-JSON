@@ -9,6 +9,8 @@ class Factory {
     	switch($function) {
     		case 'get_posts':
     		case 'posts': $class = 'Posts'; break;
+    		case 'get_categories':
+    		case 'categories': $class = 'Categories'; break;
     	}
 
         if (empty($class) || !class_exists($class)) {
