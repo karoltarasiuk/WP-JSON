@@ -11,7 +11,7 @@ class AFunction {
 
 	protected $params = array();
 
-	public function __construct($params = array()) {
+	public function __construct($params = null) {
 
 		if( is_null($params) || !is_array($params) ) {
 			$params = $_GET;

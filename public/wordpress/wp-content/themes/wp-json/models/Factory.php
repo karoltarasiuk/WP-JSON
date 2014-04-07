@@ -5,7 +5,7 @@ class Factory {
 	public static function build($function)
     {
     	$class = '';
-
+    	
     	switch($function) {
     		case 'get_posts':
     		case 'posts': $class = 'Posts'; break;

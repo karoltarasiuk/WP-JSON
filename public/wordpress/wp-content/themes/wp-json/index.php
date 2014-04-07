@@ -7,23 +7,32 @@ $_WRONG_PARAMS = array('error' => 'wrong params');
 $_MODELS_DIR = get_template_directory() . '/models/';
 
 if( !empty( $_GET['function'] ) ) {
-	$slug = $_GET['function'];
+	$method = $_GET['function'];
 }
 else {
-	$slug = removeTrailingSlash(
+	$method = removeTrailingSlash(
 		removeBeginningSlash(
 			str_replace(
-				dirname($_SERVER["SCRIPT_NAME"]), '', $_SERVER["REQUEST_URI"]
+				dirname($_SERVER["SCRIPT_NAME"]),
+				'',
+				substr(
+					$_SERVER["REQUEST_URI"],
+					0,
+					strpos(
+						$_SERVER["REQUEST_URI"],
+						'?'
+					)
+				)
 			)
 		)
 	);
 }
 
-if( empty( $slug ) ) {
+if( empty( $method ) ) {
 	die( json_encode( $_WRONG_PARAMS ) );
 }
 
-define( 'SLUG', $slug);
+define( 'METHOD', $method);
 
 $files = scandir( $_MODELS_DIR );
 foreach($files as $k => $file) {
@@ -32,7 +41,7 @@ foreach($files as $k => $file) {
 	}
 }
 
-$model = Factory::build(SLUG);
+$model = Factory::build( METHOD );
 $data = $model->execute();
 
 die( json_encode($data) );
