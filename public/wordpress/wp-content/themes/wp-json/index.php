@@ -40,6 +40,6 @@ foreach($files as $k => $file) {
 }
 
 $model = Factory::build( METHOD );
-$data = $model->execute();
+$data = array_values( $model->execute() );
 
 die( json_encode($data) );
