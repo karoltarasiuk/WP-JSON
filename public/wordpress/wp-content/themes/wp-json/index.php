@@ -10,19 +10,17 @@ if( !empty( $_GET['function'] ) ) {
 	$method = $_GET['function'];
 }
 else {
+	$temp = strpos($_SERVER["REQUEST_URI"], '?');
+	if($temp === false) {
+		$temp = strlen($_SERVER["REQUEST_URI"]);
+	}
+
 	$method = removeTrailingSlash(
 		removeBeginningSlash(
 			str_replace(
 				dirname($_SERVER["SCRIPT_NAME"]),
 				'',
-				substr(
-					$_SERVER["REQUEST_URI"],
-					0,
-					strpos(
-						$_SERVER["REQUEST_URI"],
-						'?'
-					)
-				)
+				substr($_SERVER["REQUEST_URI"], 0, $temp)
 			)
 		)
 	);
