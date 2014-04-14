@@ -20,4 +20,17 @@ class Posts extends AFunction {
 	);
 
 	protected static $functionName = 'get_posts';
+
+	protected function process( $data ) {
+
+		if( empty($this->params['noMeta']) || $this->params['noMeta'] == 1 ) {
+
+			foreach($data as $index => $post) {
+
+				$post->meta = get_post_meta($post->ID);
+			}
+		}
+
+		return $data;
+	}
 }
