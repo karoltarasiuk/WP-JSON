@@ -55,3 +55,7 @@ All available methods are derived directly from WP codex. If you make a call to 
  - call: *application_root/wordpress/pages* or *application_root/wordpress?function=get_pages*
  - docs: *https://codex.wordpress.org/Function_Reference/get_pages*
  - call with params: *application_root/wordpress/pages?parent=0*
+
+4. JS API
+
+*js/wp-json.js* contains WPJSON object which is a gateway to fetch WPJSON data. It requires jQuery.ajax method to work, so ensure jQuery is also added (you can find jquery.js in the package). *js/script.js* contains all the use cases with brief explanation.
