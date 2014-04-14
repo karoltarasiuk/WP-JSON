@@ -44,6 +44,7 @@ All available methods are derived directly from WP codex. If you make a call to 
  - call: *application_root/wordpress/posts* or *application_root/wordpress?function=get_posts*
  - docs: *https://codex.wordpress.org/Template_Tags/get_posts*
  - call with params: *application_root/wordpress/posts?posts_per_page=10&offset=30*
+ - posts method returns meta data by default, but if you don't want it set the param 'noMeta' to '1', e.g. *application_root/wordpress/posts?noMeta=1*
 
 2. Categories method
  - call: *application_root/wordpress/categories* or *application_root/wordpress?function=get_categories*
