@@ -121,13 +121,3 @@ var WPJSON = function(apiurl) {
 	// initializing WPJSON
 	that.init();
 };
-
-var c = function() {
-	console.log(arguments);
-};
-var a = WPJSON();
-c(a);
-a.getPosts(c);
-var b = new WPJSON('another');
-c(b);
-b.getPosts(c);
