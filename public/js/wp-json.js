@@ -85,9 +85,13 @@ var WPJSON = function(apiurl) {
 	}
 
 	// categories getter
-	that.getCategories = function(callback) {
+	that.getCategories = function(callback, params) {
 
-		request(callback, params, 'posts');
+		if(!params) {
+			params = {};
+		}
+
+		request(callback, params, 'categories');
 	};
 
 	// pages getter
@@ -97,7 +101,7 @@ var WPJSON = function(apiurl) {
 			params = {};
 		}
 
-		request(callback, params, 'posts');
+		request(callback, params, 'pages');
 	};
 
 	// pages getter including pagination
